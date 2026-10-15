@@ -37,7 +37,6 @@ export default function GradeProdutos() {
             <CardProduto key={produto.id} produto={produto} index={index} />
           ))}
         </div>
-
         {filtrados.length === 0 && (
           <p className="text-center text-gray-400 py-12">
             Nenhum produto encontrado nesta categoria.

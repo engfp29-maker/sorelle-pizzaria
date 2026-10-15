@@ -5,11 +5,14 @@ import type { Produto } from "@/data/cardapio";
 
 export interface ItemCarrinho {
   id: string;
+  chave: string;
   produto: Produto;
   quantidade: number;
   tamanho?: string;
   precoUnitario: number;
 }
+
+export type TipoEntrega = "entrega" | "retirada";
 
 interface CartContextType {
   itens: ItemCarrinho[];
@@ -19,6 +22,15 @@ interface CartContextType {
   limparCarrinho: () => void;
   total: number;
   totalItens: number;
+  // Checkout
+  tipoEntrega: TipoEntrega;
+  setTipoEntrega: (tipo: TipoEntrega) => void;
+  observacoes: string;
+  setObservacoes: (obs: string) => void;
+  // UI
+  carrinhoAberto: boolean;
+  abrirCarrinho: () => void;
+  fecharCarrinho: () => void;
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
@@ -26,6 +38,9 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 export function CartProvider({ children }: { children: ReactNode }) {
   const [itens, setItens] = useState<ItemCarrinho[]>([]);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [tipoEntrega, setTipoEntrega] = useState<TipoEntrega>("entrega");
+  const [observacoes, setObservacoes] = useState("");
+  const [carrinhoAberto, setCarrinhoAberto] = useState(false);
 
   useEffect(() => {
     const saved = localStorage.getItem("sorelle-carrinho");
@@ -44,6 +59,14 @@ export function CartProvider({ children }: { children: ReactNode }) {
       localStorage.setItem("sorelle-carrinho", JSON.stringify(itens));
     }
   }, [itens, isLoaded]);
+
+  function abrirCarrinho() {
+    setCarrinhoAberto(true);
+  }
+
+  function fecharCarrinho() {
+    setCarrinhoAberto(false);
+  }
 
   function adicionarAoCarrinho(produto: Produto, tamanho?: string) {
     const precoUnitario =
@@ -120,6 +143,13 @@ export function CartProvider({ children }: { children: ReactNode }) {
         limparCarrinho,
         total,
         totalItens,
+        tipoEntrega,
+        setTipoEntrega,
+        observacoes,
+        setObservacoes,
+        carrinhoAberto,
+        abrirCarrinho,
+        fecharCarrinho,
       }}
     >
       {children}

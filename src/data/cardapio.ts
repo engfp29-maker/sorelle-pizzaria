@@ -311,7 +311,7 @@ export const produtos: Produto[] = [
     descricao: "Refrigerante Coca Cola 350ml",
     preco: 7,
     categoria: "bebidas",
-    imagem: "/images/1.jpeg",
+    imagem: "/images/bebidas/coca-cola.svg",
   },
   {
     id: "beb-02",
@@ -319,7 +319,7 @@ export const produtos: Produto[] = [
     descricao: "Refrigerante Coca Cola 600ml",
     preco: 8,
     categoria: "bebidas",
-    imagem: "/images/1.jpeg",
+    imagem: "/images/bebidas/coca-cola-garrafa.svg",
   },
   {
     id: "beb-03",
@@ -327,7 +327,7 @@ export const produtos: Produto[] = [
     descricao: "Refrigerante Coca Cola Zero 1 litro",
     preco: 12,
     categoria: "bebidas",
-    imagem: "/images/1.jpeg",
+    imagem: "/images/bebidas/coca-cola-zero.svg",
   },
   {
     id: "beb-04",
@@ -335,7 +335,7 @@ export const produtos: Produto[] = [
     descricao: "Refrigerante Coca Cola 1 litro",
     preco: 12,
     categoria: "bebidas",
-    imagem: "/images/1.jpeg",
+    imagem: "/images/bebidas/coca-cola-garrafa.svg",
   },
   {
     id: "beb-05",
@@ -343,7 +343,7 @@ export const produtos: Produto[] = [
     descricao: "Refrigerante Coca Cola 1,5 litro",
     preco: 14,
     categoria: "bebidas",
-    imagem: "/images/1.jpeg",
+    imagem: "/images/bebidas/coca-cola-garrafa.svg",
   },
   {
     id: "beb-06",
@@ -351,7 +351,7 @@ export const produtos: Produto[] = [
     descricao: "Refrigerante Coca Cola 2 litros",
     preco: 16,
     categoria: "bebidas",
-    imagem: "/images/1.jpeg",
+    imagem: "/images/bebidas/coca-cola-garrafa.svg",
   },
   {
     id: "beb-07",
@@ -359,7 +359,7 @@ export const produtos: Produto[] = [
     descricao: "Refrigerante Guaraná Antarctica 1 litro",
     preco: 10,
     categoria: "bebidas",
-    imagem: "/images/1.jpeg",
+    imagem: "/images/bebidas/guarana.svg",
   },
   {
     id: "beb-08",
@@ -367,7 +367,7 @@ export const produtos: Produto[] = [
     descricao: "Refrigerante Guaraná Antarctica 2 litros",
     preco: 15,
     categoria: "bebidas",
-    imagem: "/images/1.jpeg",
+    imagem: "/images/bebidas/guarana.svg",
   },
   {
     id: "beb-09",
@@ -375,7 +375,7 @@ export const produtos: Produto[] = [
     descricao: "Refrigerante Tuchaua 1 litro",
     preco: 10,
     categoria: "bebidas",
-    imagem: "/images/1.jpeg",
+    imagem: "/images/bebidas/tuchaua.svg",
   },
   {
     id: "beb-10",
@@ -383,7 +383,7 @@ export const produtos: Produto[] = [
     descricao: "Refrigerante Tuchaua 2 litros",
     preco: 15,
     categoria: "bebidas",
-    imagem: "/images/1.jpeg",
+    imagem: "/images/bebidas/tuchaua.svg",
   },
   {
     id: "beb-11",
@@ -391,7 +391,7 @@ export const produtos: Produto[] = [
     descricao: "Refrigerante Fanta Laranja 1 litro",
     preco: 10,
     categoria: "bebidas",
-    imagem: "/images/1.jpeg",
+    imagem: "/images/bebidas/fanta-laranja.svg",
   },
   {
     id: "beb-12",
@@ -399,7 +399,7 @@ export const produtos: Produto[] = [
     descricao: "Refrigerante Fanta Laranja 2 litros",
     preco: 16,
     categoria: "bebidas",
-    imagem: "/images/1.jpeg",
+    imagem: "/images/bebidas/fanta-laranja.svg",
   },
   {
     id: "beb-13",
@@ -407,7 +407,7 @@ export const produtos: Produto[] = [
     descricao: "Suco Del Vale Uva ou Laranja 1 litro",
     preco: 10,
     categoria: "bebidas",
-    imagem: "/images/1.jpeg",
+    imagem: "/images/bebidas/suco.svg",
   },
   {
     id: "beb-14",
@@ -415,7 +415,7 @@ export const produtos: Produto[] = [
     descricao: "Suco natural de Acerola, Goiaba ou Abacaxi 1 litro",
     preco: 12,
     categoria: "bebidas",
-    imagem: "/images/1.jpeg",
+    imagem: "/images/bebidas/suco-natural.svg",
   },
   {
     id: "beb-15",
@@ -423,7 +423,7 @@ export const produtos: Produto[] = [
     descricao: "Kapo Uva ou Laranja 200ml",
     preco: 5,
     categoria: "bebidas",
-    imagem: "/images/1.jpeg",
+    imagem: "/images/bebidas/kapo.svg",
   },
   {
     id: "beb-16",
@@ -431,7 +431,7 @@ export const produtos: Produto[] = [
     descricao: "Água mineral 500ml",
     preco: 3,
     categoria: "bebidas",
-    imagem: "/images/1.jpeg",
+    imagem: "/images/bebidas/agua-mineral.svg",
   },
 
   // ========== BATATAS ==========
@@ -441,7 +441,7 @@ export const produtos: Produto[] = [
     descricao: "Porção de batata frita crocante 150g",
     preco: 14,
     categoria: "batatas",
-    imagem: "/images/3.jpeg",
+    imagem: "/images/batatas/batata-frita.svg",
   },
   {
     id: "bat-02",
@@ -449,7 +449,7 @@ export const produtos: Produto[] = [
     descricao: "Porção de batata frita crocante 200g",
     preco: 18,
     categoria: "batatas",
-    imagem: "/images/3.jpeg",
+    imagem: "/images/batatas/batata-frita.svg",
   },
   {
     id: "bat-03",
@@ -457,7 +457,7 @@ export const produtos: Produto[] = [
     descricao: "Batata frita coberta com calabresa e cheddar 200g",
     preco: 25,
     categoria: "batatas",
-    imagem: "/images/3.jpeg",
+    imagem: "/images/batatas/batata-calabresa-cheddar.svg",
     destaque: true,
   },
 
@@ -468,7 +468,7 @@ export const produtos: Produto[] = [
     descricao: "Pudim de leite condensado caseiro",
     preco: 8,
     categoria: "sobremesas",
-    imagem: "/images/1.jpeg",
+    imagem: "/images/sobremesas/pudim.svg",
     destaque: true,
   },
   {
@@ -477,7 +477,7 @@ export const produtos: Produto[] = [
     descricao: "Creme cremoso de cupuaçu",
     preco: 10,
     categoria: "sobremesas",
-    imagem: "/images/1.jpeg",
+    imagem: "/images/sobremesas/creme-cupuacu.svg",
     destaque: true,
   },
   {
@@ -486,7 +486,7 @@ export const produtos: Produto[] = [
     descricao: "Creme cremoso de maracujá",
     preco: 10,
     categoria: "sobremesas",
-    imagem: "/images/1.jpeg",
+    imagem: "/images/sobremesas/creme-maracuja.svg",
   },
   {
     id: "sob-04",
@@ -494,6 +494,6 @@ export const produtos: Produto[] = [
     descricao: "Creme cremoso de amendoim",
     preco: 10,
     categoria: "sobremesas",
-    imagem: "/images/1.jpeg",
+    imagem: "/images/sobremesas/creme-amendoim.svg",
   },
 ];

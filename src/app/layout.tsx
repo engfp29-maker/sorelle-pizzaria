@@ -1,7 +1,8 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { CartProvider } from "@/context/CartContext";
 
 const poppins = Poppins({
@@ -10,10 +11,51 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
+const siteUrl = "https://sorelle-pizzaria.vercel.app";
+
 export const metadata: Metadata = {
-  title: "Pizzaria Sorelle - A melhor pizza da região",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Pizzaria Sorelle - A melhor pizza da região",
+    template: "%s | Pizzaria Sorelle",
+  },
   description:
     "Tradição italiana desde 1998. Massas artesanais, ingredientes selecionados e o verdadeiro sabor da Itália. Faça seu pedido pelo WhatsApp!",
+  keywords: [
+    "pizzaria",
+    "pizza",
+    "pizza artesanal",
+    "delivery de pizza",
+    "Pizzaria Sorelle",
+    "Belém",
+    "Ananindeua",
+  ],
+  openGraph: {
+    title: "Pizzaria Sorelle - A melhor pizza da região",
+    description:
+      "Tradição italiana desde 1998. Massas artesanais, ingredientes selecionados e o verdadeiro sabor da Itália.",
+    url: siteUrl,
+    siteName: "Pizzaria Sorelle",
+    images: [{ url: "/logo.jpeg", width: 800, height: 800, alt: "Pizzaria Sorelle" }],
+    locale: "pt_BR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pizzaria Sorelle - A melhor pizza da região",
+    description:
+      "Tradição italiana desde 1998. Faça seu pedido pelo WhatsApp!",
+    images: ["/logo.jpeg"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#dc2626",
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
@@ -27,6 +69,7 @@ export default function RootLayout({
         <CartProvider>
           <Header />
           {children}
+          <WhatsAppFloat />
         </CartProvider>
       </body>
     </html>
