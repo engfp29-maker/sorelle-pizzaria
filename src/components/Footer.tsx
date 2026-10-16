@@ -94,6 +94,10 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-10 pt-8 text-center text-sm text-gray-500">
           <p>© 2025 Pizzaria Sorelle. Todos os direitos reservados.</p>
+          <p className="mt-2 text-xs text-gray-600">
+            Algumas imagens são de uso livre (Wikimedia Commons, CC BY-SA):
+            por E4024, Cary Bass, AlekhyaDas e Melsj.
+          </p>
         </div>
       </div>
     </footer>
