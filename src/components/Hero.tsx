@@ -6,44 +6,36 @@ import { loja } from "@/data/loja";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-24">
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat transform scale-110 filter blur-[3px]"
         style={{
-          backgroundImage: "url('/fundo-cardapio.jpeg')",
+          backgroundImage: "url('/logo.jpeg')",
         }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/85" />
+      <div className="absolute inset-0 bg-black/60" />
 
       {/* Content */}
-      <div className="relative z-10 text-center text-white px-4 max-w-4xl py-12">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="text-red-400 font-medium text-sm md:text-lg mb-4 tracking-wider uppercase"
+      <div className="relative z-10 text-center text-white px-4 max-w-4xl py-12 flex flex-col items-center justify-center">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9, y: 20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          className="mb-8"
         >
-          Desde 1998
-        </motion.p>
-
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="text-4xl sm:text-6xl md:text-7xl font-bold mb-6 leading-tight"
-        >
-          Pizzaria{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-yellow-400">
-            Sorelle
-          </span>
-        </motion.h1>
+          <img
+            src="/logo.jpeg"
+            alt="Pizzaria Sorelle"
+            className="w-56 sm:w-72 md:w-96 h-auto mx-auto rounded-3xl shadow-[0_10px_35px_rgba(0,0,0,0.8)] border border-white/10"
+          />
+        </motion.div>
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-          className="text-base md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto"
+          transition={{ delay: 0.5 }}
+          className="text-base sm:text-xl md:text-2xl text-white font-medium mb-8 max-w-2xl mx-auto text-center drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]"
         >
           A melhor pizza artesanal da região. Massa fina, ingredientes frescos e
           o sabor que só a tradição italiana pode oferecer.
@@ -52,12 +44,12 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 }}
+          transition={{ delay: 0.7 }}
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           <a
             href="#cardapio"
-            className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full font-medium text-base md:text-lg transition-all hover:scale-105 shadow-lg"
+            className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full font-semibold text-base md:text-lg transition-all hover:scale-105 shadow-lg"
           >
             Ver Cardápio
           </a>
@@ -74,7 +66,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.2 }}
+          transition={{ delay: 1.1 }}
           className="mt-14"
         >
           <a

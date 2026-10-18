@@ -2,6 +2,7 @@
 
 @theme inline {
   --font-sans: var(--font-poppins);
+  --font-logo: var(--font-logo), Georgia, serif;
 }
 
 html {
@@ -17,7 +18,24 @@ body {
 
 /* Compensa o header fixo ao navegar por âncoras */
 section[id] {
-  scroll-margin-top: 4rem;
+  scroll-margin-top: 5rem;
+}
+
+/* Logo sobre fundo claro, com leve brilho para realçar as cores */
+.logo-img {
+  mix-blend-mode: multiply;
+  filter: saturate(1.15) contrast(1.05);
+}
+
+.logo-plate {
+  background-color: #ffffff;
+  box-shadow: 0 6px 18px -6px rgba(0, 0, 0, 0.25),
+    inset 0 0 0 1px rgba(220, 38, 38, 0.15);
+}
+
+/* Título no estilo da logo */
+.font-logo {
+  font-family: var(--font-logo);
 }
 
 /* Scrollbar personalizada */

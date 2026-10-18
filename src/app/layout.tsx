@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Poppins } from "next/font/google";
+import { Poppins, Cinzel_Decorative } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
@@ -9,6 +9,12 @@ const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
   variable: "--font-poppins",
+});
+
+const cinzel = Cinzel_Decorative({
+  subsets: ["latin"],
+  weight: ["400", "700", "900"],
+  variable: "--font-logo",
 });
 
 const siteUrl = "https://sorelle-pizzaria.vercel.app";
@@ -64,10 +70,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" className={`${poppins.variable} scroll-smooth`}>
+    <html
+      lang="pt-BR"
+      className={`${poppins.variable} ${cinzel.variable} scroll-smooth`}
+    >
       <body className="font-sans antialiased">
         <CartProvider>
-          <Header />
           {children}
           <WhatsAppFloat />
         </CartProvider>
